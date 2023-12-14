@@ -39,7 +39,7 @@ stack_t *node_add(stack_t **stack, const int n)
  * Return: newly created node, if memory allocation fails, the function will
  * return NULL.
  */
-stack_t *add - last_node(stack_t **stack, const int n)
+stack_t *add_last_node(stack_t **stack, const int n)
 {
 
 	stack_t *new_node = malloc(sizeof(stack_t));
@@ -55,8 +55,8 @@ stack_t *add - last_node(stack_t **stack, const int n)
 
 	if (*stack == NULL)
 	{
-		new->next = NULL;
-		new->prev = NULL;
+		new_node->next = NULL;
+		new_node->prev = NULL;
 		*stack = new_node;
 		return (new_node);
 	}

@@ -3,23 +3,24 @@
 #include <stdio.h>
 /**
  * free_data - Clean all program mallocs
+ *@var: Pointer to vars structure
  * Return: None
  */
 void free_data(void)
 {
-	if (var.buff != NULL)
-		free(var.buff);
-	if (var.file != NULL)
-		fclose(var.file);
-	free(var.dict);
-	if (var.head != NULL)
+	if (var->buffer != NULL)
+		free(var->buffer);
+	if (var->file != NULL)
+		fclose(var->file);
+	free(var->dictionary);
+	if (var->head != NULL)
 	{
-		while (var.head->next != NULL)
+		while (var->head->next != NULL)
 		{
-			var.head = var.head->next;
-			free(var.head->prev);
+			var->head = var->head->next;
+			free(var->head->prev);
 		}
-		free(var.head);
+		free(var->head);
 	}
 }
 
@@ -51,7 +52,7 @@ instruction_t *create_instruction()
 	ptr[12].opcode = "pstr", ptr[12].f = pstr;
 	ptr[13].opcode = "rotl", ptr[13].f = rotl;
 	ptr[14].opcode = "rotr", ptr[14].f = rotr;
-	ptr[15].opcode = "stack", ptr[15].f = stack;
+	ptr[15].opcode = "stack", ptr[15].f = stack_t;
 	ptr[16].opcode = "queue", ptr[16].f = queue;
 	ptr[17].opcode = NULL, ptr[17].f = NULL;
 
@@ -93,16 +94,14 @@ int call_function(vars *var, char *opcode)
 int initialise(vars *var)
 {
 	var->file = NULL;
-	var->buff = NULL;
-	var->tmp = 0;
-	var->dict = create_instruction();
-	if (var->dict == NULL)
+	var->buffer= NULL;
+	var->temp = 0;
+	var->dictionary = create_instruction();
+	if (var->dictionary == NULL)
 		return (EXIT_FAILURE);
 	var->head = NULL;
-	var->line_number = 1;
-	var->MODE = 0;
+	var->line_cnt = 1;
+	var->data_structure = 0;
 
 	return (EXIT_SUCCESS);
 }
-
-
