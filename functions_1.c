@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 #include <ctype.h>
 #include "monty.h"
+=======
+#include <stdio.h>
+#include <stdlib.h>
+#include "monty.h"
+
+>>>>>>> fe262551a1ea2f7244e7e14f48a407084cdf42dd
 /**
 * pop - pops the very top element of the stack
 * @stack: stack given by main in start.c
@@ -34,7 +41,7 @@ void swap(stack_t **stack, unsigned int line_cnt)
 	 stack_t *temp = *stack;
 	 int num = 0;
 
-        if (temp->next == NULL || *stack == NULL)
+        if (temp == NULL || temp->next == NULL)
         {
                 fprintf(stderr, "L%d: can't swap, stack too short\n", line_cnt);
 		free_data();
@@ -44,6 +51,7 @@ void swap(stack_t **stack, unsigned int line_cnt)
 	temp->n = (temp->next)->n;
 	(temp->next)->n = num;
 }
+<<<<<<< HEAD
 /**
  * is_digit - checks if a string is a digit
  * @str: string to check
@@ -64,3 +72,5 @@ int is_digit(char *str)
 	}
 	return (1);
 }
+=======
+>>>>>>> fe262551a1ea2f7244e7e14f48a407084cdf42dd

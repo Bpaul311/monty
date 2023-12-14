@@ -13,6 +13,9 @@
 #include <ctype.h>
 #define Buffsize 4096
 
+#include <stdio.h>
+#include <stdlib.h>
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -28,6 +31,8 @@ typedef struct stack_s
         struct stack_s *prev;
         struct stack_s *next;
 } stack_t;
+
+stack_t *node_add(stack_t **stack, const int n);
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
@@ -42,4 +47,10 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+
+
+
+stack_t *node_add(stack_t **stack, const int n);
+void print_err(char *argv);
+void print_e(void);
 #endif
