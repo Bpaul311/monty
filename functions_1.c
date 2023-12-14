@@ -6,7 +6,6 @@
 #include <stdlib.h>
 #include "monty.h"
 
->>>>>>> fe262551a1ea2f7244e7e14f48a407084cdf42dd
 /**
 * pop - pops the very top element of the stack
 * @stack: stack given by main in start.c
@@ -72,5 +71,3 @@ int is_digit(char *str)
 	}
 	return (1);
 }
-=======
->>>>>>> fe262551a1ea2f7244e7e14f48a407084cdf42dd

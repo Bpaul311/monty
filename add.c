@@ -30,7 +30,8 @@ stack_t *node_add(stack_t **stack, const int n)
 
 	return (new_node);
 }
-**
+
+/**
  * add-last_node - adds a node to a stack_t at the top.
  * @stack: stack head
  * @n: number of the node
