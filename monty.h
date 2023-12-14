@@ -91,4 +91,6 @@ void mod(stack_t **stack, unsigned int line_cnt);
 void pop(stack_t **stack, unsigned int line_cnt);
 void swap(stack_t **stack, unsigned int line_cnt);
 void push(stack_t **stack, unsigned int line_cnt);
+void add(stack_t **stack, unsigned int line_cnt);
+int is_ascii(int a);
 #endif

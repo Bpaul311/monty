@@ -8,19 +8,19 @@
  */
 void free_data(void)
 {
-	if (var->buffer != NULL)
-		free(var->buffer);
-	if (var->file != NULL)
-		fclose(var->file);
-	free(var->dictionary);
-	if (var->head != NULL)
+	if (var.buffer != NULL)
+		free(var.buffer);
+	if (var.file != NULL)
+		fclose(var.file);
+	free(var.dictionary);
+	if (var.head != NULL)
 	{
-		while (var->head->next != NULL)
+		while (var.head->next != NULL)
 		{
-			var->head = var->head->next;
-			free(var->head->prev);
+			var.head = var.head->next;
+			free(var.head->prev);
 		}
-		free(var->head);
+		free(var.head);
 	}
 }
 

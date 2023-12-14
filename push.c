@@ -59,7 +59,7 @@ void push(stack_t **stack, unsigned int line_cnt)
 		exit(EXIT_FAILURE);
 	}
 	tmp->n = atoi(num);
-	if (var.MODE == 0 || !*stack)
+	if (var.data_structure == 0 || !*stack)
 	{
 		tmp->next = *stack;
 		tmp->prev = NULL;
