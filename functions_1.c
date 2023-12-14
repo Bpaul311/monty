@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "monty.h"
+
 /**
 * pop - pops the very top element of the stack
 * @stack: stack given by main in start.c
@@ -32,7 +36,7 @@ void swap(stack_t **stack, unsigned int line_cnt)
 	 stack_t *temp = *stack;
 	 int num = 0;
 
-        if (temp->next == NULL || *stack == NULL)
+        if (temp == NULL || temp->next == NULL)
         {
                 fprintf(stderr, "L%d: can't swap, stack too short\n", line_cnt);
 		free_data();
@@ -42,5 +46,3 @@ void swap(stack_t **stack, unsigned int line_cnt)
 	temp->n = (temp->next)->n;
 	(temp->next)->n = num;
 }
-
-
