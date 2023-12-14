@@ -45,14 +45,14 @@ instruction_t *create_instruction()
 	ptr[5].opcode = "add", ptr[5].f = add;
 	ptr[6].opcode = "nop", ptr[6].f = NULL;
 	ptr[7].opcode = "sub", ptr[7].f = sub;
-	ptr[8].opcode = "div", ptr[8].f = div;
+	ptr[8].opcode = "div", ptr[8].f = divide_stack;
 	ptr[9].opcode = "mul", ptr[9].f = prod;
 	ptr[10].opcode = "mod", ptr[10].f = mod;
 	ptr[11].opcode = "pchar", ptr[11].f = pchar;
 	ptr[12].opcode = "pstr", ptr[12].f = pstr;
 	ptr[13].opcode = "rotl", ptr[13].f = rotl;
 	ptr[14].opcode = "rotr", ptr[14].f = rotr;
-	ptr[15].opcode = "stack", ptr[15].f = stack_t;
+	ptr[15].opcode = "stack", ptr[15].f = stack;
 	ptr[16].opcode = "queue", ptr[16].f = queue;
 	ptr[17].opcode = NULL, ptr[17].f = NULL;
 
@@ -69,12 +69,12 @@ int call_function(vars *var, char *opcode)
 {
 	int i;
 
-	for (i = 0; var->dict[i].opcode; i++)
-		if (strcmp(opcode, var->dict[i].opcode) == 0)
+	for (i = 0; var->dictionary[i].opcode; i++)
+		if (strcmp(opcode, var->dictionary[i].opcode) == 0)
 		{
-			if (!var->dict[i].f)
+			if (!var->dictionary[i].f)
 				return (EXIT_SUCCESS);
-			var->dict[i].f(&var->head, var->line_cnt);
+			var->dictionary[i].f(&var->head, var->line_cnt);
 			return (EXIT_SUCCESS);
 		}
 	if (strlen(opcode) != 0 && opcode[0] != '#')

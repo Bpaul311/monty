@@ -1,11 +1,8 @@
+#define _POSIX_C_SOURCE 200809L
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include "monty.h"
-
-void print_err(char *argv);
-void print_e(void);
-int status = 0;
 /**
  * main - entry point
  * @argv: list of arguments passed to our program

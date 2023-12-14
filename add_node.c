@@ -32,3 +32,4 @@ int is_ascii(int a)
 	}
 	return (0);
 }
+

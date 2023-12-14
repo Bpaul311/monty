@@ -6,11 +6,11 @@
  *
  * Return: NOTHING
  */
-void stack(stack_t **stack, unsigned int line_cnt, vars *var)
+void stack(stack_t **stack, unsigned int line_cnt)
 {
 	(void) stack;
 	(void) line_cnt;
-	var->data_structure = 0;
+	var.data_structure = 0;
 }
 /**
  * queue -  creates a stack
@@ -19,9 +19,9 @@ void stack(stack_t **stack, unsigned int line_cnt, vars *var)
  *
  * Return: NOTHING
  */
-void queue(stack_t **stack, unsigned int line_cnt, vars *var)
+void queue(stack_t **stack, unsigned int line_cnt)
 {
 	(void) stack;
 	(void) line_cnt;
-	var->data_structure = 1;
+	var.data_structure = 1;
 }
