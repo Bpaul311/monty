@@ -30,7 +30,7 @@ void sub(stack_t **stack, unsigned int line_cnt)
  *
  * Return: void
  */
-void div(stack_t **stack, unsigned int line_cnt)
+void divide_stack(stack_t **stack, unsigned int line_cnt)
 {
 	if (!*stack || !(*stack)->next)
 	{

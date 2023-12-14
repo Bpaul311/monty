@@ -75,7 +75,7 @@ void pall(stack_t **stack, unsigned int line_cnt __attribute__((unused)));
 void print_err(char *argv);
 void print_e(void);
 void free_data(void);
-void queue(stack_t **stack, unsigned int line_cnt);
+void queue(stack_t **stack, unsigned int line_cnt, vars *var);
 void pstr(stack_t **stack, unsigned int line_cnt __attribute__((unused)));
 void pchar(stack_t **stack, unsigned int line_cnt);
 int call_function(vars *var, char *opcode);
@@ -91,4 +91,5 @@ void mod(stack_t **stack, unsigned int line_cnt);
 void pop(stack_t **stack, unsigned int line_cnt);
 void swap(stack_t **stack, unsigned int line_cnt);
 void push(stack_t **stack, unsigned int line_cnt);
+void stack(stack_t **stack, unsigned int line_cnt, vars *var);
 #endif
