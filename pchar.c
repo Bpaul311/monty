@@ -12,7 +12,9 @@
  */
 void pstr(stack_t **stack, unsigned int line_cnt __attribute__((unused)))
 {
-	stack_t *tmp = *stack;
+	stack_t *temp = *stack;
+
+	(void) line_cnt;
 
 	if (!stack || !*stack)
 	{
@@ -47,7 +49,7 @@ void pchar(stack_t **stack, unsigned int line_cnt)
 	if (is_ascii((*stack)->n) == 0)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_cnt);
-		free_data()
+		free_data();
 		exit(EXIT_FAILURE);
 		return;
 	}
