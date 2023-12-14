@@ -21,8 +21,7 @@ void stack(stack_t **stack, unsigned int line_cnt)
  */
 void queue(stack_t **stack, unsigned int line_cnt)
 {
-        (void) stack;
-        (void) line_cnt;
-        var.data_structure = 1;
+	(void) stack;
+	(void) line_cnt;
+	var.data_structure = 1;
 }
-

@@ -3,7 +3,7 @@
 /**
 * rotl - rotates the last node of a stack_t stack
 * @stack: stack head
-* @line_count: line count
+* @line_cnt: line count
 *
 * Return: void
 */
@@ -29,7 +29,7 @@ void rotl(stack_t **stack, unsigned int line_cnt __attribute__((unused)))
 /**
 * rotr - rotates the first element of the stack
 * @stack: stack head
-* @line_count: line count
+* @line_cnt: line count
 *
 * Return: void
 */
@@ -44,9 +44,8 @@ void rotr(stack_t **stack, unsigned int line_cnt __attribute__((unused)))
 	while (tmp->next)
 		tmp = tmp->next;
 	(*stack)->prev = temp;
-       	temp->next = *stack;
+	temp->next = *stack;
 	*stack = current;
 	current->prev = NULL;
 
 }
-

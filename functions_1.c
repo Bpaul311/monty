@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 #include <ctype.h>
 #include "monty.h"
-=======
 #include <stdio.h>
 #include <stdlib.h>
 #include "monty.h"
@@ -40,17 +38,16 @@ void swap(stack_t **stack, unsigned int line_cnt)
 	 stack_t *temp = *stack;
 	 int num = 0;
 
-        if (temp == NULL || temp->next == NULL)
-        {
-                fprintf(stderr, "L%d: can't swap, stack too short\n", line_cnt);
+	if (temp == NULL || temp->next == NULL)
+	{
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_cnt);
 		free_data();
-                exit(EXIT_FAILURE);
-        }
+		exit(EXIT_FAILURE);
+	}
 	num = temp->n;
 	temp->n = (temp->next)->n;
 	(temp->next)->n = num;
 }
-<<<<<<< HEAD
 /**
  * is_digit - checks if a string is a digit
  * @str: string to check

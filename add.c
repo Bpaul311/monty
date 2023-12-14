@@ -32,15 +32,16 @@ stack_t *node_add(stack_t **stack, const int n)
 }
 
 /**
- * add-last_node - adds a node to a stack_t at the top.
+ * add - last_node - adds a node to a stack_t at the top.
  * @stack: stack head
  * @n: number of the node
  *
  * Return: newly created node, if memory allocation fails, the function will
  * return NULL.
  */
-stack_t *add-last_node(stack_t **stack, const int n)
+stack_t *add - last_node(stack_t **stack, const int n)
 {
+
 	stack_t *new_node = malloc(sizeof(stack_t));
 	stack_t *temp = *stack;
 
