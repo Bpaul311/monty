@@ -1,3 +1,5 @@
+#include <ctype.h>
+#include "monty.h"
 /**
 * pop - pops the very top element of the stack
 * @stack: stack given by main in start.c
@@ -42,5 +44,23 @@ void swap(stack_t **stack, unsigned int line_cnt)
 	temp->n = (temp->next)->n;
 	(temp->next)->n = num;
 }
-
-
+/**
+ * is_digit - checks if a string is a digit
+ * @str: string to check
+ *
+ * Return: 1 if success, 0 if not
+ */
+int is_digit(char *str)
+{
+	if (!str || *str == '\0')
+		return (0);
+	if (*str == '-')
+		str++;
+	while (*str)
+	{
+		if (isdigit(*str) == 0)
+			return (0);
+		str++;
+	}
+	return (1);
+}
