@@ -27,3 +27,19 @@ void print_e(void)
 	fprintf(stderr, "USAGE: monty file\n");
 	exit(EXIT_FAILURE);
 }
+/**
+ * is_num - Clean all program mallocs
+ * @string: Num to validate
+ * Return: 0 Success, 1 Failed
+ */
+int is_num(char *string)
+{
+	int i;
+
+	for (i = 0; string[i]; i++)
+	{
+		if (string[i] < 48 || string[i] > 57)
+			return (1);
+	}
+	return (0);
+}

@@ -13,9 +13,6 @@
 #include <ctype.h>
 #define Buffsize 4096
 
-#include <stdio.h>
-#include <stdlib.h>
-
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -67,7 +64,10 @@ typedef struct glob_variable
 	int data_structure;
 } vars;
 
+extern vars var;
 
+
+int is_num(char *string);
 stack_t *node_add(stack_t **stack, const int n);
 stack_t *add - last_node(stack_t **stack, const int n);
 size_t print_stack(const stack_t *stack);
@@ -90,5 +90,5 @@ void prod(stack_t **stack, unsigned int line_cnt);
 void mod(stack_t **stack, unsigned int line_cnt);
 void pop(stack_t **stack, unsigned int line_cnt);
 void swap(stack_t **stack, unsigned int line_cnt);
-
+void push(stack_t **stack, unsigned int line_cnt);
 #endif
