@@ -67,6 +67,8 @@ typedef struct glob_variable
 extern vars var;
 
 
+
+
 int is_num(char *string);
 stack_t *node_add(stack_t **stack, const int n);
 stack_t *add_last_node(stack_t **stack, const int n);

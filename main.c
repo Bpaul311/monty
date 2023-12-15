@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <string.h>
 #include "monty.h"
+
+vars var;
 /**
  * main - entry point
  * @argv: list of arguments passed to our program
